@@ -59,7 +59,6 @@ function! BufferList()
   let l:i = 0 | while l:i <= l:bufcount | let l:i = l:i + 1
     let l:bufname = bufname(l:i)
     if strlen(l:bufname)
-      \&& getbufvar(l:i, '&modifiable')
       \&& getbufvar(l:i, '&buflisted')
 
       " adapt width and/or buffer name
